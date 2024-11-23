@@ -1,0 +1,36 @@
+/* this lives in /.config/gtk-3.0 */
+.xfce4-panel {
+   border-bottom-left-radius: 13px;
+   border-bottom-right-radius: 13px;
+   border-top-left-radius: 13px;
+   border-top-right-radius: 13px;
+ }
+#XfcePanelWindowWrapper{border-radius: 0px;}
+.xfce4-panel .tasklist .toggle :checked {
+  border-radius: 4px;
+}
+ 
+.tasklist button:checked {
+  border-bottom: 3px solid #3D3846;
+}
+ 
+.flat,
+.toggle {
+  font-family: 'Hurmit Nerd Font';
+  font-size: 14px;
+  padding: 4px;
+}
+.flat:hover,
+.toggle:hover {
+  font-family: 'Hurmit Nerd Font';
+  font-size: 14px;
+  padding: 4px;
+}
+.flat:checked,
+.toggle:checked {
+  font-family: 'Hurmit Nerd Font';
+  font-size: 14px;
+  border-bottom: 3px solid #3D3846;
+  padding: 4px;
+}
+
