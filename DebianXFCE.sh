@@ -11,7 +11,7 @@ sudo apt install -y dialog mtools acpi acpid gvfs-backends
 #
 # Essentials:
 # ===========
-sudo apt install -y nala neovim rsync curl git pandoc zsh ranger gparted openssh-server bpytop neofetch kdeconnect mpv ffmpeg samba gnome-disk-utility gimp hunspell-en-ca plank kate exa evince avahi-daemon gvfs-backends scrot i3lock tar unzip zip p7zip zram-tools systemd-zram-generator stow netselect-apt ffmpegthumbnailer 
+sudo apt install -y nala neovim rsync curl git pandoc zsh ranger gparted openssh-server bpytop neofetch kdeconnect mpv ffmpeg samba gnome-disk-utility gimp hunspell-en-ca plank kate exa evince avahi-daemon gvfs-backends scrot i3lock tar unzip zip p7zip zram-tools systemd-zram-generator stow netselect-apt ffmpegthumbnailer
 #
 #
 # Printing and bluetooth (if needed):
@@ -61,6 +61,11 @@ sudo apt install -y arc-theme papirus-icon-theme breeze-cursor-theme kde-style-b
 # sudo apt install -y flrig fldigi wsjtx wsjtx-data wsjtx-doc js8call ax25-apps ax25-tools ax25mail-utils libax25 libax25-dev talkd
 #
 # *Get GridTracker*: curl https://debian.gridtracker.org/gridtracker_deb_install.sh | sudo bash
+#
+# Laptop Battery Optimization:
+# ============================
+# sudo apt install tlp tlp-rdw smartmontools
+# enable & start: sudo systemctl enable tlp.service 
 #
 # Other Sources:
 # ==============
