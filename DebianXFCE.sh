@@ -3,85 +3,81 @@
 # DEBIAN 12 BOOKWORM + XFCE
 # =========================
 #
-# XFCE Musthaves:
-# ===============
-# Network File Tools/System Events
-sudo apt install -y dialog mtools acpi acpid gvfs-backends
-#
-#
-# Essentials:
+# ESSENTIALS:
 # ===========
-sudo apt install -y nala neovim rsync curl git pandoc zsh ranger gparted openssh-server bpytop neofetch kdeconnect mpv ffmpeg samba gnome-disk-utility gimp hunspell-en-ca plank kate exa evince avahi-daemon gvfs-backends scrot i3lock tar unzip zip p7zip zram-tools systemd-zram-generator stow netselect-apt ffmpegthumbnailer
+sudo apt isntall -y acpi acpid avahi-daemon bpytop curl dialog evince exa ffmpeg ffmpegthumbnailer gimp git gnome-disk-utility gparted gvfs-backends gvfs-backends hunspell-en-ca i3lock kate kdeconnect mpv mtools nala neofetch neovim netselect-apt openssh-server p7zip pandoc plank ranger rsync samba scrot stow systemd-zram-generator tar unzip zip zram-tools zsh
 #
+# PRINTING AND BLUETOOTH:
+# =======================
+sudo apt install -y bluez blueman cups
 #
-# Printing and bluetooth (if needed):
-# ===================================
-sudo apt install -y cups bluez blueman
-#
-#
-# Fonts:
+# FONTS:
 # ======
-sudo apt install -y fonts-font-awesome fonts-powerline fonts-liberation2 fonts-liberation fonts-terminus fonts-sil-gentium fonts-firacode fonts-recommended
+sudo apt install -y fonts-firacode fonts-font-awesome fonts-liberation fonts-liberation2 fonts-powerline fonts-recommended fonts-sil-gentium fonts-terminus
 #
-#
-# Greeter & Settings:
-# ====================
+# GREETER & SETTINGS:
+# ===================
 sudo apt install -y lightdm-gtk-greeter-settings slick-greeter
 #
-#
-# Flatpak & Enable Flathub:
-# =================================
+# FLATPAK & ENABLE FLATHUB:
+# =========================
 sudo apt install flatpak -y && flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 #
 #
-# Flatpaks:
-# ====================
-flatpak install Brave Chromium Chrome Bitwarden Flatseal Zoom trustedqsl
+# INSTALL FLATPAKS:
+# =================
+flatpak install flathub org.chromium.Chromium
+flatpak install flathub com.brave.Browser
+flatpak install flathub com.bitwarden.desktop
+flatpak install flathub com.github.tchx84.Flatseal
+flatpak install flathub us.zoom.Zoom
+flatpak install flathub org.arrl.trustedqsl
 #
-# Theming:
+# THEMING:
 # ========
-# theme: arc-theme
+# theme: arc-theme or adapta
 # icons: papirus-icon-theme
 # cursor: breeze-cursor-theme
 # kde: kde-style-breeze (for kate editor)
 #
-sudo apt install -y arc-theme papirus-icon-theme breeze-cursor-theme kde-style-breeze
-
+sudo apt install -y adapta-gtk-theme-colorpack arc-theme breeze-cursor-theme kde-style-breeze papirus-icon-theme
+#
 # ===================
 # OPTIONAL INSTALLS:
 # ===================
 #
-# Latex:
+# LATEX:
 # ======
 # sudo apt install -y texlive-full texlive-lang-all texlive-luatex texlive-xetex texlive-fonts-extra
 #
 #
-# Ham Radio:
+# HAM RADIO:
 # ==========
 # sudo apt install -y flrig fldigi wsjtx wsjtx-data wsjtx-doc js8call ax25-apps ax25-tools ax25mail-utils libax25 libax25-dev talkd
 #
 # *Get GridTracker*: curl https://debian.gridtracker.org/gridtracker_deb_install.sh | sudo bash
 #
-# Laptop Battery Optimization:
+# LAPTOP BATTERY OPTIMIZATION:
 # ============================
 # sudo apt install tlp tlp-rdw smartmontools
 # enable & start: sudo systemctl enable tlp.service 
 #
-# Other Sources:
+# OTHER SOURCES:
 # ==============
-# OhMyZsh: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# OhMyZsh: 
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # ytdlp: https://github.com/yt-dlp/yt-dlp
 #
-# =====================
-# POST-INSTALL CONFIGS:
-# =====================
+# =======================
+# =POST-INSTALL CONFIGS:=
+# =======================
 #
-# Enable the Greeter
-# ==================
+# ENABLE THE GREETER:
+# ===================
 # sudo systemctl enable lightdm
 #
-# Use Slick Greeter
-# =================
+# USE SLICK GREETER:
+# ==================
 # cd /etc/lightdm
 # sudo nvim lightdm.conf
 # find #greeter-session= and make it greeter-session=slick-greeter
@@ -92,25 +88,22 @@ sudo apt install -y arc-theme papirus-icon-theme breeze-cursor-theme kde-style-b
 # draw-user-backgrounds=false
 # background=/usr/share/backgrounds/slickback.jpg
 #
-# Enable the Network Stuff
-# ========================
+# ENABLE THE NETWORK STUFF:
+# =========================
 # sudo systemctl enable avahi-daemon && sudo systemctl enable acpid
 #
-# Make Lightdm Remember User Name
-# ===============================
+# GREETER REMEMBER USER NAME:
+# ===========================
 # sudo nvim /etc/lightdm/lightdm.conf  Remove hashtag on this line: #greeter-hide-users=false
 #
-# Remove Grub timeout*:(Set GRUB_TIMEOUT=0)
+# REMOVE GRUB TIMEOUT: (Set GRUB_TIMEOUT=0)
 # =========================================
 # sudo nvim /etc/default/grub && sudo update-grub
 #
-# Add User to the Dialout Group
-# =============================
+# ADD USER TO DIALOUT GROUP:
+# ==========================
 # sudo usermod -aG dialout jason
 #
-# Add user to Sudoers
-# ===================
+# ADD USER TO SUDOERS:
+# ====================
 # sudo adduser jason sudo
-#
-# EXA installation (a better version of ls) replace ls command in .zshrc file with line below
-# alias ls='exa --color=always --group-directories-first'
