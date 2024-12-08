@@ -5,7 +5,7 @@
 #
 # ESSENTIALS:
 # ===========
-sudo apt isntall -y acpi acpid avahi-daemon bpytop curl dialog evince exa ffmpeg ffmpegthumbnailer gimp git gnome-disk-utility gparted gvfs-backends gvfs-backends hunspell-en-ca i3lock kate kdeconnect mpv mtools nala neofetch neovim netselect-apt openssh-server p7zip pandoc plank ranger rsync samba scrot stow systemd-zram-generator tar unzip zip zram-tools zsh
+7zip arc-theme asunder at audacity ax25-apps ax25-xtools bat blueman bluez bpytop breeze btop calibre chromium cmatrix curl cutycapt darktable duf emacs espeak evince exa ffmpeg ffmpegthumbnailer filezilla finger firefox-esr flatpak fonts-jetbrains-mono fonts-liberation fonts-powerline fonts-recommended fonts-terminus fonts-ubuntu fonts-ubuntu-console fonts-ubuntu-title fzf galculator gdebi git gnome-disk-utility gparted gpick gpsd gpsd-clients gsfonts-other gvfs-backends gvfs-fuse htop hunspell-en-ca i3lock img2pdf k3b kate lame libavcodec59 libavcodec-extra libdvd-pkg libopusenc0 libopusenc-dev libopusenc-doc lightdm-gtk-greeter-settings linkchecker lsd menulibre micro mlocate moreutils most mpv musescore3 neofetch neovim netselect-apt nfs-kernel-server ngspice opus-tools oregano pandoc paper-icon-theme papirus-icon-theme pdftk powerline python-greenlet-dev python-greenlet-doc qalculate-gtk qrencode qt5-style-kvantum ranger rclone ripgrep rsync samba screenfetch scrot simple-scan slick-greeter spell stow systemd-zram-generator tealdeer telegram-desktop texlive-fonts-extra texlive-full texlive-lang-all texlive-luatex texlive-xetex timeshift tmux trustedqsl ttf-mscorefonts-installer universal-ctags vim vim-scripts vlc webp-pixbuf-loader whois xlog xnec2c xpdf yubikey-manager-qt yubioath-desktop zram-tools zsh
 #
 # PRINTING AND BLUETOOTH:
 # =======================
@@ -32,6 +32,18 @@ flatpak install flathub com.bitwarden.desktop
 flatpak install flathub com.github.tchx84.Flatseal
 flatpak install flathub us.zoom.Zoom
 flatpak install flathub org.arrl.trustedqsl
+flatpak install flathub com.makemkv.MakeMKV
+flatpak install flathub fr.handbrake.ghb
+flatpak install flathub io.gitlab.librewolf-community
+flatpak install flathub org.inkscape.Inkscape
+flatpak install flathub org.keepassxc.KeePassXC
+flatpak install flathub org.libreoffice.LibreOffice
+flatpak install flathub org.localsend.localsend_app
+flatpak install flathub org.musescore.MuseScore
+flatpak install flathub org.shotcut.Shotcut
+flatpak install flathub org.raspberrypi.rpi-imager
+flatpak install flathub org.gnome.gitlab.YaLTeR.VideoTrimmer
+flatpak install flathub org.gtk.Gtk3theme.Adwaita-dark
 #
 # THEMING:
 # ========
